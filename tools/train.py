@@ -24,13 +24,19 @@ import captioning.utils.misc as utils
 from captioning.utils.rewards import init_scorer, get_self_critical_reward
 from captioning.modules.loss_wrapper import LossWrapper
 
+seed = 42
+def set_seed(seed):
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+
 
 def add_summary_value(writer, key, value, iteration):
     if writer:
         writer.add_scalar(key, value, iteration)
 
 def train(opt):
-
+    os.environ["CUDA_VISIBLE_DEVICES"] = str(opt.vis_device)
     ################################
     # Build dataloader
     ################################
@@ -291,6 +297,6 @@ def train(opt):
         stack_trace = traceback.format_exc()
         print(stack_trace)
 
-
+set_seed(seed)
 opt = opts.parse_opt()
 train(opt)

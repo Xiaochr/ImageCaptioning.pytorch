@@ -18,6 +18,8 @@ def if_use_feat(caption_model):
 def parse_opt():
     parser = argparse.ArgumentParser()
     # Data input settings
+    parser.add_argument('--vis_device', type=int, default=0,
+                    help='visible gpu')
     parser.add_argument('--input_json', type=str, default='data/coco.json',
                     help='path to the json file containing additional info and vocab')
     parser.add_argument('--input_fc_dir', type=str, default='data/cocotalk_fc',

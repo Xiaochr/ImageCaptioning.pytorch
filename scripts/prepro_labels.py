@@ -143,10 +143,29 @@ def main(params):
     imgs = json.load(open(params['input_json'], 'r'))
     imgs = imgs['images']
 
-    seed(123) # make reproducible
+    seed(42) # make reproducible
     
     # create the vocab
-    vocab = build_vocab(imgs, params)
+    if params['use_coco_vocab'] == 0:
+        vocab = build_vocab(imgs, params)
+        # with open('/root/prepared_data/coco_vocab.json', 'w') as f:
+        #     f.write(json.dumps(vocab))
+    else:
+        vocab = json.load(open('/root/prepared_data/coco_vocab.json', 'r'))
+        temp_img = json.load(open('/root/prepared_data/full/dataset_coco.json', 'r'))
+        counts = {}
+        for img in temp_img['images']:
+            for sent in img['sentences']:
+                for w in sent['tokens']:
+                    counts[w] = counts.get(w, 0) + 1
+
+        for img in imgs:
+            img['final_captions'] = []
+            for sent in img['sentences']:
+                txt = sent['tokens']
+                caption = [w if counts.get(w,0) > params['word_count_threshold'] else 'UNK' for w in txt]
+                img['final_captions'].append(caption)
+
     itow = {i+1:w for i,w in enumerate(vocab)} # a 1-indexed vocab translation table
     wtoi = {w:i+1 for i,w in enumerate(vocab)} # inverse table
     
@@ -198,6 +217,7 @@ if __name__ == "__main__":
     # options
     parser.add_argument('--max_length', default=16, type=int, help='max length of a caption, in number of words. captions longer than this get clipped.')
     parser.add_argument('--word_count_threshold', default=5, type=int, help='only words that occur more than this number of times will be put in vocab')
+    parser.add_argument('--use_coco_vocab', default=1, type=int, help='use cached coco vocab')
 
     args = parser.parse_args()
     params = vars(args) # convert to ordinary dict

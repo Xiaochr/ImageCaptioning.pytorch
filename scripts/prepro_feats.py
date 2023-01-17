@@ -50,7 +50,7 @@ def main(params):
     imgs = imgs['images']
     N = len(imgs)
 
-    seed(123) # make reproducible
+    seed(42) # make reproducible
 
     dir_fc = params['output_dir']+'_fc'
     dir_att = params['output_dir']+'_att'
