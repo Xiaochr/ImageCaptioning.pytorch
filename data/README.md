@@ -1,3 +1,7 @@
+
+The following is the instructions in [Luo et al.'s repository](https://github.com/ruotianluo/ImageCaptioning.pytorch). In our work, we use almost the same codes with only small adaptations, so the original guidance is applicable. 
+
+
 # Prepare data
 
 Note: every preprocessed file or preextracted features can be found in [link](https://drive.google.com/open?id=1eCdz62FAVCGogOuNhy87Nmlo5_I0sH2J).
