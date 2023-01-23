@@ -1,6 +1,11 @@
 
 The following is the instructions in [Luo et al.'s repository](https://github.com/ruotianluo/ImageCaptioning.pytorch). In our work, we use almost the same codes with only small adaptations, so the original guidance is applicable. 
 
+`data/` folder contains the sampled COCO image ids used in the paper (`data/sample_img_ids/`), and the example codes for baseline image and text augmentation (`data/baseline_aug`). 
+
+
+---
+
 
 # Prepare data
 

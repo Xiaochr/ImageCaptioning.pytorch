@@ -131,6 +131,8 @@ An example code that we used for text-to-image synthesis is in `sd/`. The synthe
 
 In this repository, `sd` stands for $SD_{base}$, `sd_5` for $SD_{true}$, `sd+para` for $SD_{para}$, and `sample_10_sd_90` for 10\% COCO + $SD_{base}$. 
 
+The sampled image ids for limited data situations (10\% ~ 50\% COCO) are in `data/sample_img_ids/`. The example codes for the baseline image and text augmentations are in `data/baseline_aug/`. 
+
 ## Feature Extraction
 
 After successful installation, you can run the following example commands to extract features for the captioning models. Note that the file dir in the command lines should be replaced depending on your situation. 
