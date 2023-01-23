@@ -1,0 +1,16 @@
+caption_model: newfc
+input_json: /root/autodl-nas/prepared_data/sampled/sample_10_sd+para_90.json
+input_fc_dir: /root/autodl-nas/sd_aug_fc
+input_att_dir: /root/autodl-nas/sd_aug_att
+input_label_h5: /root/autodl-nas/prepared_data/sampled/sample_10_sd+para_90_label.h5
+learning_rate: 0.0005
+learning_rate_decay_start: 0
+scheduled_sampling_start: 0
+
+language_eval: 1
+checkpoint_path: /root/autodl-nas/logs/log_fc_sample_10_sd+para_90
+save_checkpoint_every: 5000
+val_images_use: 5000
+
+batch_size: 10
+max_epochs: 30
