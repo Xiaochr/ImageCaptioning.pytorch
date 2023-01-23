@@ -93,20 +93,6 @@ source /etc/profile
 ``` -->
 
 
-## Data Quality Assessment
-
-The implementation of the three multimodal data quality assessment methods mentioned in the paper: 
-
-- MUSIQ: [PyTorch Toolbox for Image Quality Assessment](https://github.com/chaofengc/IQA-PyTorch).
-
-- CLIPScore: [Codes for EMNLP 2021 paper CLIPScore](https://github.com/jmhessel/clipscore). 
-
-- VIFIDEL: Codes adapted from the original [VIFIDEL codes](https://github.com/ImperialNLP/vifidel). 
-
-For more details, please refer to `quality/`. 
-
-
-
 ---
 
 If you have difficulty running the training scripts in `tools`. You can try installing this repo as a python package:
@@ -193,7 +179,13 @@ python3 tools/eval.py --dump_images 0 --num_images 5000 \
 
 ## Data Quality Assessment
 
-For more details about the implementation of MUSIQ, CLIPScore, and VIFIDEL, please refer to `quality/`. 
+For more details about the implementation of MUSIQ, CLIPScore, and VIFIDEL, please refer to the corresponding repositories: 
+
+- MUSIQ: [PyTorch Toolbox for Image Quality Assessment](https://github.com/chaofengc/IQA-PyTorch).
+
+- CLIPScore: [Codes for EMNLP 2021 paper CLIPScore](https://github.com/jmhessel/clipscore). 
+
+- VIFIDEL: Codes adapted from the original [VIFIDEL codes](https://github.com/ImperialNLP/vifidel). 
 
 
 # Examples
