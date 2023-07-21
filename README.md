@@ -1,6 +1,8 @@
 # Multimodal Data Augmentation for Image Captioning using Diffusion Models
 
-This repository contains the codes for the paper [*Multimodal Data Augmentation for Image Captioning using Diffusion Models*](https://arxiv.org/abs/2305.01855). 
+<!-- This repository contains the codes for the paper [*Multimodal Data Augmentation for Image Captioning using Diffusion Models*](https://arxiv.org/abs/2305.01855).  -->
+
+This repository contains the codes for the paper *Multimodal Data Augmentation for Image Captioning using Diffusion Models*.
 
 The codes for the models, training, and evaluations are mainly adapted from [Luo et al.'s work](https://openaccess.thecvf.com/content_cvpr_2018/html/Luo_Discriminability_Objective_for_CVPR_2018_paper.html). You can refer to their [github repository](https://github.com/ruotianluo/ImageCaptioning.pytorch) for more information and instructions. 
 
