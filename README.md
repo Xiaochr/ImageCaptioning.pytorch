@@ -2,7 +2,7 @@
 
 <!-- This repository contains the codes for the paper [*Multimodal Data Augmentation for Image Captioning using Diffusion Models*](https://arxiv.org/abs/2305.01855).  -->
 
-This repository contains the codes for the paper *Multimodal Data Augmentation for Image Captioning using Diffusion Models*.
+This repository contains the codes for the paper [*Multimodal Data Augmentation for Image Captioning using Diffusion Models*](https://dl.acm.org/doi/10.1145/3607827.3616839) in [ACMMM 23 LGM3A workshop](https://lgm3a2023.github.io/LGM3A2023/).
 
 The codes for the models, training, and evaluations are mainly adapted from [Luo et al.'s work](https://openaccess.thecvf.com/content_cvpr_2018/html/Luo_Discriminability_Objective_for_CVPR_2018_paper.html). You can refer to their [github repository](https://github.com/ruotianluo/ImageCaptioning.pytorch) for more information and instructions. 
 
@@ -198,4 +198,25 @@ We will make our synthetic images public later, and now we offer some examples i
 
 Model training examples are in `configs/`. Several evaluation results are in `eval_results/`. 
 
+# Recommended Reference
+
+If you find our work useful, please consider citing:
+
+```
+@inproceedings{10.1145/3607827.3616839,
+author = {Xiao, Changrong and Xu, Sean Xin and Zhang, Kunpeng},
+title = {Multimodal Data Augmentation for Image Captioning Using Diffusion Models},
+year = {2023},
+isbn = {9798400702839},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3607827.3616839},
+doi = {10.1145/3607827.3616839},
+pages = {23–33},
+numpages = {11},
+keywords = {data synthesis, image captioning, multimodal applications},
+location = {Ottawa ON, Canada},
+series = {LGM3A '23}
+}
+```
 
